@@ -20,6 +20,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- CI workflow (`.github/workflows/ci.yml`) running install, lint, typecheck, build and tests on pull requests and pushes (Node 22).
+
+### Changed
+
+- Bumped `undici` 7 -> 8, `semantic-release` 24 -> 25 and `@semantic-release/github` 11 -> 12.
+- Applied `npm audit fix` for non-breaking advisories (PostCSS, Vite, picomatch).
+
+### Security
+
+- One moderate advisory remains in `brace-expansion`, bundled inside the `npm` package (a transitive dependency of `semantic-release`). It is not reachable at runtime and cannot be resolved without a forced, potentially breaking `semantic-release` change.
+
 ## [0.1.0] - 2026-02-04
 
 ### Added
