@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/wyre-technology/node-it-glue/compare/v1.1.0...v1.1.1) (2026-05-26)
+
+
+### Bug Fixes
+
+* correct packaging exports map, add lint + CI, bump deps ([#3](https://github.com/wyre-technology/node-it-glue/issues/3)) ([0b413ff](https://github.com/wyre-technology/node-it-glue/commit/0b413ffe44bce5ada135a4fa39ec5eadc04068d5))
+
 # [1.1.0](https://github.com/wyre-technology/node-it-glue/compare/v1.0.1...v1.1.0) (2026-03-25)
 
 
