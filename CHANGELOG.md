@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/wyre-technology/node-it-glue/compare/v1.1.1...v1.1.2) (2026-06-22)
+
+
+### Bug Fixes
+
+* **tsconfig:** restore include/exclude globs ([#34](https://github.com/wyre-technology/node-it-glue/issues/34)) ([2f1f86e](https://github.com/wyre-technology/node-it-glue/commit/2f1f86ebb5802d43be3f46a5841cf1716eb4d293))
+
 ## [1.1.1](https://github.com/wyre-technology/node-it-glue/compare/v1.1.0...v1.1.1) (2026-05-26)
 
 
