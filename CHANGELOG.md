@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/wyre-technology/node-it-glue/compare/v1.1.3...v1.1.4) (2026-08-11)
+
+
+### Bug Fixes
+
+* **http:** throw instead of returning undefined when deserialized data is empty ([#59](https://github.com/wyre-technology/node-it-glue/issues/59)) ([e3dc02a](https://github.com/wyre-technology/node-it-glue/commit/e3dc02a782413d93827f5de8ecfe32d33db44630)), closes [wyre-technology/halopsa-mcp#76](https://github.com/wyre-technology/halopsa-mcp/issues/76)
+
 ## [1.1.3](https://github.com/wyre-technology/node-it-glue/compare/v1.1.2...v1.1.3) (2026-08-06)
 
 
