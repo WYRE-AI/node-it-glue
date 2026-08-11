@@ -9,6 +9,7 @@ import { getHeaders } from './config.js';
 import { RateLimiter, retryWithBackoff } from './rate-limiter.js';
 import {
   createErrorFromResponse,
+  ITGlueError,
   ITGlueNetworkError,
   ITGlueRateLimitError,
   ITGlueServerError,
@@ -270,14 +271,42 @@ export class HttpClient {
   }
 
   /**
+   * Deserialize a single-resource response, throwing if the API returned
+   * no resource (empty array or missing `data` member). Without this guard
+   * these responses would silently resolve `undefined` typed as T — on
+   * write paths the record was already created/updated, so a caller that
+   * crashes on the `undefined` and retries would duplicate the write.
+   */
+  private deserializeOne<T>(
+    response: JsonApiResponse,
+    method: HttpMethod,
+    path: string
+  ): T {
+    if (response?.data != null) {
+      const deserialized = deserialize<T>(response);
+      const entity = Array.isArray(deserialized.data)
+        ? deserialized.data[0]
+        : deserialized.data;
+      if (entity != null) {
+        return entity;
+      }
+    }
+
+    throw new ITGlueError(
+      `IT Glue returned no resource for ${method} ${path} (response data was empty or missing)`,
+      200,
+      response,
+      path,
+      method
+    );
+  }
+
+  /**
    * GET request for a single resource
    */
   async getOne<T>(path: string, params?: Record<string, unknown>): Promise<T> {
-    const response = await this.getAndDeserialize<T>(path, params);
-    if (Array.isArray(response.data)) {
-      return response.data[0];
-    }
-    return response.data;
+    const response = await this.get<JsonApiResponse>(path, params);
+    return this.deserializeOne<T>(response, 'GET', path);
   }
 
   /**
@@ -290,11 +319,7 @@ export class HttpClient {
     params?: Record<string, unknown>
   ): Promise<T> {
     const response = await this.post<JsonApiResponse>(path, type, data, params);
-    const deserialized = deserialize<T>(response);
-    if (Array.isArray(deserialized.data)) {
-      return deserialized.data[0];
-    }
-    return deserialized.data;
+    return this.deserializeOne<T>(response, 'POST', path);
   }
 
   /**
@@ -308,10 +333,6 @@ export class HttpClient {
     params?: Record<string, unknown>
   ): Promise<T> {
     const response = await this.patch<JsonApiResponse>(path, type, id, data, params);
-    const deserialized = deserialize<T>(response);
-    if (Array.isArray(deserialized.data)) {
-      return deserialized.data[0];
-    }
-    return deserialized.data;
+    return this.deserializeOne<T>(response, 'PATCH', path);
   }
 }
