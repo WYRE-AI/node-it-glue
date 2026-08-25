@@ -1,3 +1,11 @@
+## [1.1.5](https://github.com/WYRE-AI/node-it-glue/compare/v1.1.4...v1.1.5) (2026-08-25)
+
+
+### Bug Fixes
+
+* **deps:** ignore undici in dependabot -- nested unreachable copy in npm's bundled tree ([#66](https://github.com/WYRE-AI/node-it-glue/issues/66)) ([99168a4](https://github.com/WYRE-AI/node-it-glue/commit/99168a43818aae005ab4f8ab74edc569e2c7c1b1))
+* migrate to WYRE-AI org (npm scope, ghcr namespace, registry) ([#68](https://github.com/WYRE-AI/node-it-glue/issues/68)) ([fe783e0](https://github.com/WYRE-AI/node-it-glue/commit/fe783e0072c9d36057e2e4feef70d9fafdd71144))
+
 ## [1.1.4](https://github.com/wyre-technology/node-it-glue/compare/v1.1.3...v1.1.4) (2026-08-11)
 
 
