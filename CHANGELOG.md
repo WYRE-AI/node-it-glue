@@ -1,3 +1,12 @@
+## [1.1.6](https://github.com/WYRE-AI/node-it-glue/compare/v1.1.5...v1.1.6) (2026-09-04)
+
+
+### Bug Fixes
+
+* **release:** restore persist-credentials:false, re-auth only for release ops ([#74](https://github.com/WYRE-AI/node-it-glue/issues/74)) ([7934460](https://github.com/WYRE-AI/node-it-glue/commit/79344603a6ea6a201a00edc893d06f162007eb60))
+* **security:** resolve dependabot alerts via npm audit fix ([#71](https://github.com/WYRE-AI/node-it-glue/issues/71)) ([67e72e0](https://github.com/WYRE-AI/node-it-glue/commit/67e72e039f39b9359c383b839f9ec6bb1dbb92b9))
+
+
 ## [1.1.5](https://github.com/WYRE-AI/node-it-glue/compare/v1.1.4...v1.1.5) (2026-08-25)
 
 
