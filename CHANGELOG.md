@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/WYRE-AI/node-it-glue/compare/v1.1.6...v1.2.0) (2026-09-04)
+
+
+### Features
+
+* **release:** use extracted CHANGELOG notes instead of --generate-notes ([#75](https://github.com/WYRE-AI/node-it-glue/issues/75)) ([7b042a1](https://github.com/WYRE-AI/node-it-glue/commit/7b042a1f4f861618c7a1ed07c6f58ff5b981c39d)), closes [node-datto-rmm#77](https://github.com/node-datto-rmm/issues/77)
+
+
 ## [1.1.6](https://github.com/WYRE-AI/node-it-glue/compare/v1.1.5...v1.1.6) (2026-09-04)
 
 
