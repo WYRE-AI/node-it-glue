@@ -72,5 +72,10 @@
   },
   "dependencies": {
     "undici": "^8.10.0"
+  },
+  "overrides": {
+    "cosmiconfig": {
+      "js-yaml": "^4.3.2"
+    }
   }
 }
