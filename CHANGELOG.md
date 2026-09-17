@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/WYRE-AI/node-it-glue/compare/v1.2.0...v1.2.1) (2026-09-15)
+
+
+### Bug Fixes
+
+* **deps:** resolve js-yaml CVE-2026-84375 ([#79](https://github.com/WYRE-AI/node-it-glue/issues/79)) ([a944616](https://github.com/WYRE-AI/node-it-glue/commit/a9446161b592a1aa9f4de1b2b66903b3ebec0f84))
+
+
 # [1.2.0](https://github.com/WYRE-AI/node-it-glue/compare/v1.1.6...v1.2.0) (2026-09-04)
 
 
