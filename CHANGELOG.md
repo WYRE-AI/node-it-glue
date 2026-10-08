@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/WYRE-AI/node-it-glue/compare/v1.2.1...v1.2.2) (2026-10-05)
+
+
+### Bug Fixes
+
+* **release:** disable http.followRedirects on authenticated git commands ([#81](https://github.com/WYRE-AI/node-it-glue/issues/81)) ([85de68e](https://github.com/WYRE-AI/node-it-glue/commit/85de68ea1a372c7c4a3c24b22b17d70d566c9b8d))
+
+
 ## [1.2.1](https://github.com/WYRE-AI/node-it-glue/compare/v1.2.0...v1.2.1) (2026-09-15)
 
 
