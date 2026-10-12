@@ -1,3 +1,25 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+
+- CI workflow (`.github/workflows/ci.yml`) running install, lint, typecheck, build and tests on pull requests and pushes (Node 22).
+
+### Changed
+
+- Bumped `undici` 7 -> 8, `semantic-release` 24 -> 25 and `@semantic-release/github` 11 -> 12.
+- Applied `npm audit fix` for non-breaking advisories (PostCSS, Vite, picomatch).
+
+### Security
+
+- One moderate advisory remains in `brace-expansion`, bundled inside the `npm` package (a transitive dependency of `semantic-release`). It is not reachable at runtime and cannot be resolved without a forced, potentially breaking `semantic-release` change.
+
 ## [1.2.2](https://github.com/WYRE-AI/node-it-glue/compare/v1.2.1...v1.2.2) (2026-10-05)
 
 
@@ -94,28 +116,6 @@
 
 * Implement remaining resource classes for full API coverage ([238bb51](https://github.com/asachs01/node-it-glue/commit/238bb517f48cd313a1d2189cf2353e751972d0e9))
 * Initial project setup with core infrastructure ([75c1acf](https://github.com/asachs01/node-it-glue/commit/75c1acf160d75362f9e4ded1fc4a098aa81f010e))
-
-# Changelog
-
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [Unreleased]
-
-### Added
-
-- CI workflow (`.github/workflows/ci.yml`) running install, lint, typecheck, build and tests on pull requests and pushes (Node 22).
-
-### Changed
-
-- Bumped `undici` 7 -> 8, `semantic-release` 24 -> 25 and `@semantic-release/github` 11 -> 12.
-- Applied `npm audit fix` for non-breaking advisories (PostCSS, Vite, picomatch).
-
-### Security
-
-- One moderate advisory remains in `brace-expansion`, bundled inside the `npm` package (a transitive dependency of `semantic-release`). It is not reachable at runtime and cannot be resolved without a forced, potentially breaking `semantic-release` change.
 
 ## [0.1.0] - 2026-02-04
 
